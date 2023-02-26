@@ -13,7 +13,7 @@ it is built using .net 6
 
 1 - Include ```LMY.WorkFlow``` in your project.
 
-2 - build your workflow configuration file (check workflow sample ```wf.json```).
+2 - build your workflow configuration file (check workflow sample ```wf.config.json```).
 
 3 - add below to program.cs 
 
@@ -24,7 +24,7 @@ builder.Services
 
 builder.UseLMYWFEngine(o =>
 {
-    o.WorkFlowsConfigFilePath = @"C:\wf.json";
+    o.WorkFlowsConfigFilePath = @"C:\wf.config.json";
     o.DBConnectionString = @"Server=.\SQLEXPRESS;Database=testdb;Integrated Security=SSPI;";
 });
 ```
