@@ -26,7 +26,7 @@ builder.Services
 
 builder.UseLMYWFEngine(o =>
 {
-    o.WorkFlowsConfigFilePath = @"C:\wf.json";
+    o.WorkFlowsConfigFilePath = @"C:\wf.config.json";
     o.DBConnectionString = @"Server=.\SQLEXPRESS;Database=testdb;Integrated Security=SSPI;";
 });
 ```
