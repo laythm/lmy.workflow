@@ -67,4 +67,162 @@ int total = 0;
 var tasks = lmyWFEngine.GetTasks("LeaveRequestWF", "user1", new string[] { "DataEntry", "Leader" }, 1, 10, out total);
 ```
 
-
+0 - sample for a work flow drawing
+{
+  "WorkFlows": [
+    {
+      "WorkFlowName": "LeaveRequestWF",
+      "Transitions": [
+        {
+          "UserGroups": [
+            "DataEntry"
+          ],
+          "TransitionName": "Save As Draft",
+          "CurrentStatuses": [
+            null,
+            "DataEntryDraft",
+            "ReturnedFromLeader",
+            "ReturnedByManagerToDataEntry"
+          ],
+          "NextStatus": "DataEntryDraft",
+          "TransitionPageName": "SavePage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "DataEntry"
+          ],
+          "TransitionName": "Send To Leader",
+          "CurrentStatuses": [
+            null,
+            "DataEntryDraft",
+            "ReturnedFromLeader",
+            "ReturnedByManagerToDataEntry"
+          ],
+          "NextStatus": "SentToLeader",
+          "TransitionPageName": "SavePage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Leader"
+          ],
+          "TransitionName": "Return",
+          "CurrentStatuses": [
+            "SentToLeader",
+            "LeaderDraft"
+          ],
+          "NextStatus": "ReturnedFromLeader",
+          "TransitionPageName": "LeaderApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Leader"
+          ],
+          "TransitionName": "Reject",
+          "CurrentStatuses": [
+            "SentToLeader",
+            "LeaderDraft"
+          ],
+          "NextStatus": "RejectedByLeader",
+          "TransitionPageName": "LeaderApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Leader"
+          ],
+          "TransitionName": "Edit And Save",
+          "CurrentStatuses": [
+            "SentToLeader",
+            "LeaderDraft",
+            "ReturnedByManagerToLeader"
+          ],
+          "NextStatus": "LeaderDraft",
+          "TransitionPageName": "LeaderApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Leader"
+          ],
+          "TransitionName": "Approve",
+          "CurrentStatuses": [
+            "SentToLeader",
+            "LeaderDraft",
+            "ReturnedByManagerToLeader"
+          ],
+          "NextStatus": "SentToManager",
+          "TransitionPageName": "LeaderApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Manager"
+          ],
+          "TransitionName": "Edit And Save",
+          "CurrentStatuses": [
+            "SentToManager",
+            "ManagerDraft"
+          ],
+          "NextStatus": "ManagerDraft",
+          "TransitionPageName": "ManagerApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Manager"
+          ],
+          "TransitionName": "Return To Leader",
+          "CurrentStatuses": [
+            "SentToManager",
+            "ManagerDraft"
+          ],
+          "NextStatus": "ReturnedByManagerToLeader",
+          "TransitionPageName": "ManagerApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Manager"
+          ],
+          "TransitionName": "Return To Data Entry",
+          "CurrentStatuses": [
+            "SentToManager",
+            "ManagerDraft"
+          ],
+          "NextStatus": "ReturnedByManagerToDataEntry",
+          "TransitionPageName": "ManagerApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Manager"
+          ],
+          "TransitionName": "Reject",
+          "CurrentStatuses": [
+            "SentToManager",
+            "ManagerDraft"
+          ],
+          "NextStatus": "RejectedByManager",
+          "TransitionPageName": "ManagerApprovalPage",
+          "TransitionCustomData": {}
+        },
+        {
+          "UserGroups": [
+            "Manager"
+          ],
+          "TransitionName": "Approve",
+          "CurrentStatuses": [
+            "SentToManager",
+            "ManagerDraft"
+          ],
+          "NextStatus": "ApprovedByManager",
+          "TransitionPageName": "ManagerApprovalPage",
+          "TransitionCustomData": {}
+        }
+      ]
+    }
+  ]
+}
