@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>LMY.Workflow</id>
+    <version>1.0.0</version>
+    <title>Lmy.Workflow</title>
+    <authors>LMY.Workflow</authors>
+    <license type="file">License.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/laythm/lmy.workflow</projectUrl>
+    <description>Package Description</description>
+    <copyright>Layth Morrar</copyright>
+    <tags>workflow lmy work flow workflow engine</tags>
+    <repository type="git" url="https://github.com/laythm/lmy.workflow" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.8.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\lmy\github\lmy.workflow\bin\Release\net6.0\LMY.Workflow.dll" target="lib\net6.0\LMY.Workflow.dll" />
+    <file src="D:\lmy\github\lmy.workflow\License.txt" target="\License.txt" />
+    <file src="D:\lmy\github\lmy.workflow\README.md" target="\README.md" />
+  </files>
+</package>

@@ -1,0 +1,12 @@
+D:\lmy\github\lmy.workflow\bin\Release\net6.0\LMY.Workflow.deps.json
+D:\lmy\github\lmy.workflow\bin\Release\net6.0\LMY.Workflow.dll
+D:\lmy\github\lmy.workflow\bin\Release\net6.0\LMY.Workflow.pdb
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.csproj.AssemblyReference.cache
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.GeneratedMSBuildEditorConfig.editorconfig
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.AssemblyInfoInputs.cache
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.AssemblyInfo.cs
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.csproj.CoreCompileInputs.cache
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.dll
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\refint\LMY.Workflow.dll
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\LMY.Workflow.pdb
+D:\lmy\github\lmy.workflow\obj\Release\net6.0\ref\LMY.Workflow.dll

@@ -1,54 +1,61 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageLicenseFile>License.txt</PackageLicenseFile>
-    <Title>Lmy.Workflow</Title>
-    <Copyright>Layth Morrar</Copyright>
-    <PackageProjectUrl>https://github.com/laythm/lmy.workflow</PackageProjectUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/laythm/lmy.workflow</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>workflow;lmy;work;flow;workflow engine;</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<Title>Lmy.Workflow</Title>
+		<Copyright>Layth Morrar</Copyright>
+		<PackageProjectUrl>https://github.com/laythm/lmy.workflow</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/laythm/lmy.workflow</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>workflow;lmy;work;flow;workflow engine;</PackageTags>
+		<Version>1.0.1</Version>
+		<PackageIcon>logo.png</PackageIcon>
+		<Authors>LMY</Authors>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="MSSQL\createRequestsTable.sql" />
-    <None Remove="MSSQL\createRequestStatusLogsTable.sql" />
-    <None Remove="MSSQL\createRequestTasksTable.sql" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="MSSQL\createRequestsTable.sql" />
+		<None Remove="MSSQL\createRequestStatusLogsTable.sql" />
+		<None Remove="MSSQL\createRequestTasksTable.sql" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="MSSQL\createRequestsTable.sql">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MSSQL\createRequestStatusLogsTable.sql">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MSSQL\createRequestTasksTable.sql">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="MSSQL\createRequestsTable.sql">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="MSSQL\createRequestStatusLogsTable.sql">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="MSSQL\createRequestTasksTable.sql">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="License.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="License.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Update="logo.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
