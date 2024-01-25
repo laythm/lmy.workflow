@@ -46,15 +46,14 @@ var result = lmyWFEngine.StartNew("LeaveRequestWF", "user1");
 var LMYWFEngineRequestID = result.MethodResult;//started worklfow id
 ```
 
-6 -you can get available transitions for specific workflow (you need to pass workflowid and current user groups ) 
+6 -you can get available actions (transitions) for specific workflow (you need to pass workflowid and current user groups ) 
 
 ```
 var transitions =lmyWFEngine.GetAvailableTransitions("LeaveRequestWF", LMYWFEngineRequestID, "user1", new string[] { "DataEntry", "Leader" });
 
-var LMYWFEngineRequestID = result.MethodResult;
 ```
 
-7 - process taken transition  
+7 - process taken action (transition)
 ```
 var moveNextResult = lmyWFEngine.MoveNext("LeaveRequestWF", LMYWFEngineRequestID, transitions.MethodResult[0].LMYWFEngineTransitionID, transitions.MethodResult[0].LMYWFEngineRequestVersionID, "user1", new string[] { "DataEntry", "Leader" }, true, "{you can include here whatever data you want}");
 ```
